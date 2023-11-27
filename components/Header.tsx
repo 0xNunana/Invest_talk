@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import LogoutButton from './LogoutButton'
+import LoginButton from './LoginButton'
 const Header = () => {
     const session = true
     if(session)
@@ -26,7 +27,9 @@ const Header = () => {
                 <Image src='/investtalk.png' alt='Logo' height={30} width={100} />
             <p className=''>Welcome to Investor Talks</p>
             </div>
+            <LoginButton/>
         </div>
+    
     </header>
   )
 }

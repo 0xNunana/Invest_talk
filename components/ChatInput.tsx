@@ -56,8 +56,8 @@ await mutate (uploadToUpstash,{
 
 
   return (
- <form onSubmit={addMessage}
- className='fixed w-full bottom-0 z-50 flex space-x-2 px-10 py-5 border-t border-gray-300'>
+ <form onSubmit={addMessage} 
+ className='fixed w-full bottom-0 bg-white z-50 flex space-x-2 px-10 py-5 border-t border-gray-300'>
     <input type='text' placeholder='Enter message here...' 
     value={input}
     onChange={(e)=>setInput(e.target.value)}
