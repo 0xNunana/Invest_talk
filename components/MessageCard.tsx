@@ -1,12 +1,20 @@
 import { Message } from '@/utils/types'
 import React from 'react'
 import Image from 'next/image'
+import { useSession } from 'next-auth/react'
 
 
 const MessageCard = ({message}:{message:Message}) => {
-    const isUser = false ;
+  const {data:session}=useSession()
+ 
+    const isUser = session?.user?.email === message.email ;
+    if (!message) {
+      // Handle the case where 'message' is undefined
+      return null;
+    }
   return (
     <div className={`flex w-fit ${isUser && 'ml-auto'}`}>
+  
         <div className={`flex-shrink-0 ${isUser && 'order-2'}`}>
             <Image src={message.profilePic} alt='Profile pic' height={10} width={50} className='rounded-full mx-2'/>
         </div> 
