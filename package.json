@@ -16,6 +16,7 @@
     "pusher-js": "^8.3.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-timeago": "^7.2.0",
     "swr": "^2.2.4",
     "uuid": "^9.0.1"
   },
@@ -23,6 +24,7 @@
     "@types/node": "^20.10.0",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-timeago": "^4.1.6",
     "@types/uuid": "^9.0.7",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",

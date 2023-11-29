@@ -2,6 +2,7 @@ import { Message } from '@/utils/types'
 import React from 'react'
 import Image from 'next/image'
 import { useSession } from 'next-auth/react'
+import TimeAgo from 'react-timeago'
 
 
 const MessageCard = ({message}:{message:Message}) => {
@@ -24,7 +25,9 @@ const MessageCard = ({message}:{message:Message}) => {
             <div className={`px-3 py-2 rounded-lg text-white ${isUser ? 'bg-blue-400 text-right ml-auto ':'bg-red-400'}  w-fit`}>
             <p>{message.message}</p>
             </div>
-           <p className='text-[0.6rem] italic px-2 text-gray-400 text-right'>{new Date(message.created_at).toLocaleString()}</p>
+           <p className='text-[0.6rem] italic px-2 text-gray-400 text-right'>
+            <TimeAgo date={new Date(message.created_at)}/>
+            </p>
         </div>
         </div>
  
